@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta charset="utf-8">
+      <title></title>
+      <style media="screen">
+            *{
+                  margin: 0;
+                  padding: 0;
+            }
+            .block {
+                  height: 100px;
+                  width: 100px;
+                  background-color: #000;
+            }
+
+            button {
+                  position: absolute;
+                  top: 130px;
+            }
+      </style>
+</head>
+
+<body>
+      <!-- <input type="text"> -->
+      <div class="block"></div>
+      <button type="button">Click Me!</button>
+
+
+</body>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+      var slug = 1;
+      // $(document).ready(function() {
+      //       $("button").mouseenter(function() {
+      //             if (slug) {
+      //                   $("div.block").hide();
+      //                   slug = 0;
+      //             } else {
+      //                   $("div.block").show();
+      //                   slug = 1;
+      //             }
+      //
+      //       });
+      // });
+      $(document).ready(function() {
+            $("button").click(function() {
+                  $("div.block").fadeTo(1000,0.5);
+            });
+      });
+      // $("input").focus(function(){
+      //       $(this).css("background-color", "#CDFCDD");
+      // });
+      // $("input").blur(function(){
+      //       $(this).css("background-color", "#fff");
+      // });
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<label for="username">用户名：</label>
+	<input type="text" id="username" name="username" />
+	<label for="password">密  码：</label>
+	<input type="password" id="password" name="password" />
+
+	<button id="btn">提 交</button>
+	<br>
+	<span class="con"></span>
+	
+</body>
+<script>
+	$(document).ready(function(){
+		$("#btn").click(function(){
+			var username = $("#username").val();
+			var password = $('#password').val();
+			$.post('test.php', {username:username, password:password}, function(data){
+				alert(data);
+				$(".con").html(data);
+			});
+		});
+	});
+</script>
+</html>

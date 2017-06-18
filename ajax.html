@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<button id="btn">123</button>
+	<p id="test">test</p>
+</body>
+<script>
+	$(document).ready(function(){
+		$("#btn").click(function(){
+			$("#test").load('test.txt', function(reponseTxt, statusTxt,xhr){
+				if (statusTxt=="success") {
+					alert('加载成功');
+				} else {
+					alert("Error:"+xhr.status+":"+xhr.statusTxt);
+				}
+			});
+		});
+	});
+</script>
+</html>

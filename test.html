@@ -5,14 +5,16 @@
       <meta charset="utf-8">
       <title></title>
       <style media="screen">
-            *{
+            * {
                   margin: 0;
                   padding: 0;
             }
+
             .block {
                   height: 100px;
                   width: 100px;
                   background-color: #000;
+                  position: absolute;
             }
 
             button {
@@ -44,9 +46,28 @@
       //
       //       });
       // });
-      $(document).ready(function() {
-            $("button").click(function() {
-                  $("div.block").fadeTo(1000,0.5);
+      // $(document).ready(function() {
+      //       $("button").click(function() {
+      //             $("div.block").fadeTo(1000,0.5);
+      //       });
+      // });
+      // $(document).ready(function() {
+      //       $("button").click(function() {
+      //             $("div.block").slideToggle(1000);
+      //       });
+      // });
+      // $("button").click(function() {
+      //       $("div.block").animate({
+      //             left: '250px',
+      //             opacity: '0.5',
+      //             height: '+=150px',
+      //             width: '+=150px',
+      //             backgroundColor: '#ffff00'
+      //       }, 1000);
+      // });
+      $("button").click(function() {
+            $("div").hide("slow", function() {
+                  $('div').show("slow");
             });
       });
       // $("input").focus(function(){
